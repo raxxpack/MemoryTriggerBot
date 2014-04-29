@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5BF8E20C190EDA5100814AB6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8E20B190EDA5100814AB6 /* main.cpp */; };
+		5BF8E20C190EDA5100814AB6 /* randomShit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8E20B190EDA5100814AB6 /* randomShit.cpp */; };
 		5BF8E20E190EDA5100814AB6 /* TutorialTriggerBot.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5BF8E20D190EDA5100814AB6 /* TutorialTriggerBot.1 */; };
-		5BF8E216190EEF7B00814AB6 /* trigger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8E215190EEF7B00814AB6 /* trigger.cpp */; };
+		5BF8E216190EEF7B00814AB6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8E215190EEF7B00814AB6 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +27,10 @@
 
 /* Begin PBXFileReference section */
 		5BF8E208190EDA5100814AB6 /* TutorialTriggerBot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TutorialTriggerBot; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF8E20B190EDA5100814AB6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5BF8E20B190EDA5100814AB6 /* randomShit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = randomShit.cpp; sourceTree = "<group>"; };
 		5BF8E20D190EDA5100814AB6 /* TutorialTriggerBot.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TutorialTriggerBot.1; sourceTree = "<group>"; };
 		5BF8E214190EDBD500814AB6 /* HackProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HackProcess.h; sourceTree = "<group>"; };
-		5BF8E215190EEF7B00814AB6 /* trigger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trigger.cpp; sourceTree = "<group>"; };
+		5BF8E215190EEF7B00814AB6 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,8 @@
 		5BF8E20A190EDA5100814AB6 /* TutorialTriggerBot */ = {
 			isa = PBXGroup;
 			children = (
-				5BF8E20B190EDA5100814AB6 /* main.cpp */,
-				5BF8E215190EEF7B00814AB6 /* trigger.cpp */,
+				5BF8E20B190EDA5100814AB6 /* randomShit.cpp */,
+				5BF8E215190EEF7B00814AB6 /* main.cpp */,
 				5BF8E214190EDBD500814AB6 /* HackProcess.h */,
 				5BF8E20D190EDA5100814AB6 /* TutorialTriggerBot.1 */,
 			);
@@ -122,8 +122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BF8E20C190EDA5100814AB6 /* main.cpp in Sources */,
-				5BF8E216190EEF7B00814AB6 /* trigger.cpp in Sources */,
+				5BF8E20C190EDA5100814AB6 /* randomShit.cpp in Sources */,
+				5BF8E216190EEF7B00814AB6 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
