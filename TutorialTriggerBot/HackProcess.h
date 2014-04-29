@@ -109,7 +109,7 @@ public:
 		while(__dwordClient == 0x0) __dwordClient = GetModuleNamePointer("client.dll", __gameProcess.th32ProcessID);
 		while(__dwordEngine == 0x0) __dwordEngine = GetModuleNamePointer("engine.dll", __gameProcess.th32ProcessID);
 		while(__dwordVGui == 0x0) __dwordVGui = GetModuleNamePointer("vguimatsurface.dll", __gameProcess.th32ProcessID);
-		__HWNDCss = FindWindow(NULL, "NameOfGame");
+		__HWNDCss = FindWindow(NULL, "Team Fortress 2");
 	}
 };
 
