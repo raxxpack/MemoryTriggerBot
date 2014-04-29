@@ -51,8 +51,6 @@ struct MyPlayer {
 		ReadProcessMemory(fProcess.__HandleProcess, (PBYTE*)(CLocalPlayer + dw_teamOffset), &Team, sizeof(int), 0);
 		
 		ReadProcessMemory(fProcess.__HandleProcess, (PBYTE*)(CLocalPlayer + dw_crosshairOffs), &CrosshairEntityID, sizeof(int), 0);
-		
-		ReadProcessMemory(fProcess.__HandleProcess, (PBYTE*)(fProcess.__dwordEngine + dw_PlayerCount), &NumOfPlayers, sizeof(int), 0);
 	}
 }MyPlayer;
 
@@ -67,7 +65,28 @@ struct PlayerList {
 	}
 }PlayerList[32];
 
-void TriggerBot() {
+void LeftClick() {
+	INPUT Input = {0};
+	Input.type = INPUT_MOUSE;
+	Input.mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
+	::SendInput(1, &Input, sizeof(INPUT));
+	
+	::ZeroMemory(&Input, sizeof(Input));
+	Input.type = INPUT_MOUSE;
+	Input.mi.dwFlags = MOUSEEVENTF_LEFTUP;
+	::SendInput(1, &Input, sizeof(INPUT));
+}
+
+void SimulatedMouseTriggerBot() {
+	//Check if valid target
+	if (MyPlayer.CrosshairEntityID <= 0 || PlayerList[MyPlayer.CrosshairEntityID].Team == MYPlayer.Team || MyPlayer.CrosshairEntityID > 32) {
+		return;
+	}
+	
+	LeftClick();
+}
+
+void MemoryTriggerBot() {
 	if(!b_ShotNow){
 		WriteProcessMemory(fProcess.__HandleProcess, (int*)(fProcess.__dwordClient + dw_attack), &i_DontShoot, sizeof(int), NULL);
 		b_ShotNow = !b_ShotNow;
@@ -101,17 +120,20 @@ int main(){
 				isTriggerbotActive = false;
 			} else {
 				
+				
+				ReadProcessMemory(fProcess.__HandleProcess, (PBYTE*)(fProcess.__dwordEngine + dw_PlayerCount), &NumOfPlayers, sizeof(int), 0);
+				
 				MyPlayer.ReadInformation();
 				
-				for(int c = 0; c < NumOfPlayers; c++){
-					PlayerList[c].ReadInformation(c);
+				for(int i = 0; i < NumOfPlayers; i++){
+					PlayerList[i].ReadInformation(i);
 				}
-				TriggerBot();
+				SimulatedMouseTriggerBot();
 			}
 			
 		}
 		else {
-			sleep(15);
+			Sleep(15);
 			if (GetAsynchKeyState(VK_F_KEY) {
 				isTriggerbotActive = true;
 			}
